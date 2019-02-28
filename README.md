@@ -1,8 +1,8 @@
 ## PyCef-React-Boilerplate
 use cefpython and React tools for desktop environment
 [中文文档](./README-CN.md)
-<div align=>
-      <img src="./internals/img/show/show.png"/></a>
+<div align="center">
+![PyCef Boilerplate Demo] (internal/show/show.png)
 </div>
 web part forked [electron-react-boilerplate:https://github.com/chentsulin/electron-react-boilerplate]   
 python part inspired by [cefpython:https://github.com/cztomczak/cefpython]
