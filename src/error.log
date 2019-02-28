@@ -1,0 +1,107 @@
+
+[2019-02-27 17:27:00] Traceback (most recent call last):
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1664, in <module>
+    main()
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1658, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1068, in run
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/friddle/Opt/pycharm/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 138, in <module>
+    main()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 125, in main
+    main_window = MainWindow()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 53, in __init__
+    self.module_registry = self.generateModule()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 59, in generateModule
+    for module in backend.__all__:
+AttributeError: module 'src.backend' has no attribute '__all__'
+
+
+[2019-02-27 17:32:41] Traceback (most recent call last):
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1664, in <module>
+    main()
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1658, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1068, in run
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/friddle/Opt/pycharm/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 140, in <module>
+    main()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 127, in main
+    main_window = MainWindow()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 53, in __init__
+    self.module_registry = self.generateModule()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 60, in generateModule
+    importlib.import_module("src.")
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.'
+
+
+[2019-02-27 18:11:12] Traceback (most recent call last):
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1664, in <module>
+    main()
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1658, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1068, in run
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/friddle/Opt/pycharm/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 141, in <module>
+    main()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 128, in main
+    main_window = MainWindow()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 56, in __init__
+    self.setupLayout()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 92, in setupLayout
+    self.cef_widget.embedBrowser()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/framework/QtCefWidget.py", line 60, in embedBrowser
+    self.browser.SetProperty("DEBUG", self.env.get("DEBUG", False))
+AttributeError: 'cefpython_py36.PyBrowser' object has no attribute 'SetProperty'
+
+
+[2019-02-27 18:23:56] Traceback (most recent call last):
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1664, in <module>
+    main()
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1658, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1068, in run
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/friddle/Opt/pycharm/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 139, in <module>
+    main()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 126, in main
+    main_window = MainWindow()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 54, in __init__
+    self.env = transformDict(os.environ._data)
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/framework/util/framework/module_utils.py", line 25, in transformDict
+    NDict["".join(key)]="".join(ODict[key])
+TypeError: sequence item 0: expected str instance, int found
+
+
+[2019-02-27 18:24:20] Traceback (most recent call last):
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1664, in <module>
+    main()
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1658, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/home/friddle/Opt/pycharm/helpers/pydev/pydevd.py", line 1068, in run
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/friddle/Opt/pycharm/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 139, in <module>
+    main()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 126, in main
+    main_window = MainWindow()
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/Main.py", line 54, in __init__
+    self.env = transformDict(os.environ._data)
+  File "/home/friddle/Project/PyCef-React-Boilerplate/src/framework/util/framework/module_utils.py", line 26, in transformDict
+    NDict["".join(key)] = "".join(ODict[key])
+TypeError: sequence item 0: expected str instance, int found
+

@@ -1,0 +1,1 @@
+loading all method and insert to js bind

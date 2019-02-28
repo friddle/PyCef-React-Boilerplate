@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hello PyCef React!</title>
+  <script>
+      (function() {
+          var debug=Boolean(ENV["DEBUG"])
+          if (debug) {
+              const link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = './style.css';
+              // HACK: Writing the script path should be done with webpack
+              document.getElementsByTagName('head')[0].appendChild(link);
+          }
+      }());
+  </script>
+</head>
+<body>
+<div id="root"></div>
+<p>Hell PyCef React</p>
+<script>
+    {
+        const scripts=[];
+        var debug=Boolean(ENV["DEBUG"])
+        //正式环境走renderer.prod.js
+        debugger
+        if(!debug)
+        {
+            scripts.push("./renderer.prod.js")
+        }
+        else {
+            scripts.push("./main.prod.js")
+        }
+        document.write(
+            scripts
+                .map(script => `<script defer src="${script}"><\/script>`)
+                .join('')
+        );
+    }
+</script>
+</body>
+</html>
