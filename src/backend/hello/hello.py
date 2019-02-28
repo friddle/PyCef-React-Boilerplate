@@ -1,10 +1,10 @@
-from src.framework.jswrapper.util import ToBindMethod, ModuleBase
+from src.framework.libs.util import ToBindMethod, ModuleBase
 
 
 class HelloWorld(ModuleBase):
     @ToBindMethod
-    def hello(self, text):
-        return "from: " + text + "to:" + "world"
+    def hello(self):
+        return "Hello From Python Backend"
 
     @ToBindMethod
     def hello_from_sqlite(self):
@@ -13,3 +13,7 @@ class HelloWorld(ModuleBase):
     @ToBindMethod
     def hello_from_http(self):
         return "hello from http"
+
+    @ToBindMethod
+    def hello_from_http(self):
+        return "hello from os"

@@ -4,7 +4,8 @@ export default class HelloModel {
 
   @observable world;
   constructor() {
-    this.world = 'Message Send To Python';
+    this.world = '';
+    this.times=1
   }
 
   @action.bound
@@ -12,8 +13,14 @@ export default class HelloModel {
     this.world = world;
   }
 
+  @action.bound
+  addTimes(times)
+  {
+    this.times=this.times+1
+  }
+
   @action
   fetchHello(){
-      window.Hello.hello("from python",(result)=>{this.setWorld(result)})
+      window.HelloWorld.hello((result)=>{console.log("result");this.setWorld(result)})
   }
 }

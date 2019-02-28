@@ -3,53 +3,49 @@
  */
 import path from 'path';
 import webpack from 'webpack';
-import  HtmlWebpackPlugin  from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
-import { dependencies } from '../../package.json';
+import { dependencies as externals } from '../../package.json';
 
 export default {
-  externals: [...Object.keys(dependencies || {})],
-
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
-            presets: ['@babel/preset-env']
-          }
+            loader: 'babel-loader',
+            options: {
+                cacheDirectory: true,
+            }
         }
       }
     ]
   },
 
-  output: {
-    path: path.join(__dirname, '../../', 'dist'),
-    // https://github.com/webpack/webpack/issues/1114
-    libraryTarget: 'commonjs2'
-  },
+    output: {
+        path: path.join(__dirname, '../../', 'dist'),
+    },
 
-  /**
-   * Determine the array of extensions that should be used to resolve modules.
-   */
-  resolve: {
-    extensions: ['.js', '.jsx', '.json']
-  },
+    /**
+     * Determine the array of extensions that should be used to resolve modules.
+     */
+    resolve: {
+        extensions: ['.js', '.jsx', '.json'],
+        modules: [
+            path.join(__dirname,'../../node_modules')
+        ]
+    },
 
-  plugins: [
-    new webpack.EnvironmentPlugin({
-      NODE_ENV: 'production'
-    }),
+    plugins: [
+        new webpack.EnvironmentPlugin({
+            NODE_ENV: 'production'
+        }),
 
-    new webpack.NamedModulesPlugin(),
+        new webpack.NamedModulesPlugin(),
 
-
-    new CopyWebpackPlugin([
-          { from: 'web/template/app.html', to:'./'}
-          ]
-    )
-  ]
+        new CopyWebpackPlugin([
+                { from: 'web/template/app.html', to:'./'}
+            ]
+        ),
+    ]
 };

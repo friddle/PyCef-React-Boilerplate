@@ -49,8 +49,6 @@ class ModuleRegister:
     def wrapperModule(self, module):
         return module
 
-    def bindToJavascript(self, browser):
-        bindings = cef.JavascriptBindings(bindToFrames=True, bindToPopups=False)
+    def bindToJavascript(self, bindings):
         for module in self.ModuleList:
             bindings.SetObject(module.__class__.__name__, self.wrapperModule(module))
-        browser.SetJavascriptBindings(bindings)

@@ -1,41 +1,52 @@
-##PyCef-React-Boilerplate
+## PyCef-React-Boilerplate
 
 use cefpython and React tools for desktop environment
 
-###Why
+### Why
 Because I hate the js as backend language. The so many library force use async and callback.
- the only matter callback should only be used in front ui update.    
+ the only matter callback should only be used in front UI update.    
 the callback and async made the system is hard to debug and track. and js is not ok for organize 
 for backend language.   
+
+### First Know
+Do not finish.
+
+
 
 
 ### FrameWork
 ```html
+   conf--
+      webpack-> webpack package configuration
+   web---
+        render->
+           components-> react components
+           containers-> react page
+           models->mbox
+        template-> 
+           app.html -> page template
    src---
-      web---
-         App.js
-         index.css
-         hello.js 
       backend---(use web)  
          hello.py 
       framework---   
-         jswrapper --- include js 2 python 2(provider mutiple thread pool)   
+         libs --- include some tools for js system default provide
          qt --- include qt tools and framework    
-         lib --- include some tools provide for js     
          installer --include installer tools
-         shell-- pyinstaller shell:打包脚本
+         shell-- pyinstaller shell:
    resources---
       icon---
       static---
    pip.conf 
-   package.json  (windows-build-tools:windows环境.webpack配置等) 
-   tools.py --核心是这个
+   package.json  
+   boiler.py --the build tools
+   babel.config.js --babel settings
+   
 ```
 
 ### Usage
-Must use Qt5
 
+
+### 
 
 ### for XP
-use pycef Version==
 

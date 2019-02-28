@@ -21,8 +21,7 @@ module.exports = api => {
         require('@babel/preset-env'),
         {
           targets: {
-              "chrome": "47",
-              "esmodules": false,
+              "chrome": "48"
           },
           useBuiltIns: 'usage'
         }
@@ -58,10 +57,15 @@ module.exports = api => {
       // Stage 3
       require('@babel/plugin-syntax-dynamic-import'),
       require('@babel/plugin-syntax-import-meta'),
+      [require('@babel/plugin-transform-runtime'), {
+            regenerator: false,
+            useESModules: true,
+      }],
+
       [require('@babel/plugin-proposal-class-properties'), { loose: true }],
       require('@babel/plugin-proposal-json-strings'),
 
-      ...(development ? developmentPlugins : productionPlugins)
+        ...(development ? developmentPlugins : productionPlugins)
     ]
   };
 };

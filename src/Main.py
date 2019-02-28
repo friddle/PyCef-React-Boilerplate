@@ -9,10 +9,10 @@ from PyQt5.QtWidgets import *
 from cefpython3 import cefpython as cef
 
 from src.framework.QtCefWidget import QtCefWidget
-from src.framework.jswrapper.util import ModuleRegister, ModuleBase
+from src.framework.libs.util import ModuleRegister, ModuleBase
 from src.framework.qt.QCefApplication import QtCefApplication
 from src.framework.qt.widget.NavigationBar import NavigationBar
-from src.framework.util.framework.module_utils import import_submodules, transformDict
+from src.framework.util.framework.module_utils import import_submodules, transformDict, str2bool
 
 WINDOWS = (platform.system() == "Windows")
 LINUX = (platform.system() == "Linux")
@@ -22,20 +22,18 @@ MAC = (platform.system() == "Darwin")
 ## TODO:初始化部分模块也在这里初始化。
 ## React:
 
-WIDTH = 800
-HEIGHT = 600
-Title = "周林傻逼"
-BEGIN_URL = "file://" + os.path.abspath(os.path.join(os.path.abspath(__file__), "../../dist/app.html"))
-NVIGATE_BAR = False
-DEBUG = True
+WIDTH = int(os.environ.get("WIDTH", "800"))
+HEIGHT = int(os.environ.get("HEIGHT", "600"))
+Title = os.environ.get("Title", "PyCefReactBoilerate")
+DEFAULT_URL = "file://" + os.path.abspath(os.path.join(os.path.abspath(__file__), "../../dist/app.html"))
+BEGIN_URL = os.environ.get("START_URL", DEFAULT_URL)
+NVIGATE_BAR = str2bool(os.environ.get("NAVIGATE_CLOSE", "False"))
+DEBUG = str2bool(os.environ.get("DEBUG", "True"))
 
-os.putenv("DEBUG", str(DEBUG))
 
 ##添加SubModule
 import_submodules("src.backend")
-import_submodules("src.framework.jswrapper")
-
-
+import_submodules("src.framework.libs")
 
 
 # 版本号检查
@@ -59,6 +57,7 @@ class MainWindow(QMainWindow):
     def generateModule(self):
         module_register = ModuleRegister()
         for module in ModuleBase.__subclasses__():
+            print(module.__name__)
             module_register.registry(module())
         return module_register
 

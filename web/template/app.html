@@ -18,19 +18,18 @@
 </head>
 <body>
 <div id="root"></div>
-<p>Hell PyCef React</p>
 <script>
     {
         const scripts=[];
         var debug=Boolean(ENV["DEBUG"])
+        var port=ENV["PORT"]
         //正式环境走renderer.prod.js
-        debugger
         if(!debug)
         {
             scripts.push("./renderer.prod.js")
         }
         else {
-            scripts.push("./main.prod.js")
+            scripts.push("http://localhost:"+port+'/dist/renderer.dev.js')
         }
         document.write(
             scripts

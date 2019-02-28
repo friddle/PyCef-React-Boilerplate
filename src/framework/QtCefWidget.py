@@ -57,10 +57,10 @@ class QtCefWidget(CefWidgetParent):
         self.browser.SetClientHandler(LoadHandler(self.parent.navigation_bar, env=self.env))
         self.browser.SetClientHandler(FocusHandler(self))
         if self.module_registry:
-            self.module_registry.bindToJavascript(self.browser)
+            self.module_registry.bindToJavascript(self.binding)
         if self.binding:
             self.binding.SetProperty("ENV", self.env)
-            self.browser.SetJavascriptBindings(self.binding)
+        self.browser.SetJavascriptBindings(self.binding)
 
     def getHandle(self):
         if self.hidden_window:

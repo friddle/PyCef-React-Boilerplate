@@ -31,3 +31,7 @@ def putIfNotExists(env, key, value):
     if key not in env.keys():
         env[key] = value
     return env
+
+
+def str2bool(v):
+    return v.lower() in ("yes", "true", "t", "1")
