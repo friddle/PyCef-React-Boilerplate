@@ -1,14 +1,12 @@
 ## PyCef-React-Boilerplate
-use cefpython and React tools for desktop environment
 
-[中文文档](https://github.com/friddle/PyCef-React-Boilerplate/blob/master/ReadME-CN.md)
+用cefPython3和React做的一个框架
 
-### Why Not User Electron
-Simple: Who want to use python as backend server logic not nodejs.
-Nodejs as backend language is so fucked to use
+### 为什么不用Electron
+简单：不喜欢用Nodejs做后端的框架(nodejs的后端框架确实不好用)
 
-### First Know
-Not finish(Package and Tools Part)
+### 注意项
+没有完成。打包和工具没写完
 
 ### FrameWork
 ```html
@@ -39,7 +37,11 @@ Not finish(Package and Tools Part)
    
 ```
 
-### Usage
+### 用法
+后端业务逻辑部分代码在 src.backend   
+前端代码在web下面  
+工具 boiler.py(没完成)
 
 ### for XP
+没完成
 
