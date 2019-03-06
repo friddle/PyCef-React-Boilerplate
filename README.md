@@ -1,9 +1,13 @@
 ## PyCef-React-Boilerplate
-use cefpython and React tools for desktop environment
-[中文文档](./README-CN.md)  
+use cefpython and React tools for desktop environment    
+[中文文档](./README-CN.md)    
+
+
 <div align="center">
-![PyCef Boilerplate Demo] (internal/show/show.png)
+  <a><img src="./internal/show/show2.png"/></a>
 </div>
+  
+  
 web part forked [electron-react-boilerplate:https://github.com/chentsulin/electron-react-boilerplate]   
 python part inspired by [cefpython:https://github.com/cztomczak/cefpython]
 
@@ -12,7 +16,7 @@ Simple: Who want to use python as backend server logic not nodejs.
 Nodejs as backend language is so fucked to use
 
 ### First Know
-Not finish(Package and Part)
+Not finish(Package and Tools Part)
 Require Tools:
 npm yarn pip python
 
@@ -47,10 +51,52 @@ npm yarn pip python
 ```
 
 ### Usage
-  1. build
-  2. write code  
-     -- package: write python code to src.backend 
-  
+   start the package you should run
+   
+   check:check the tools you should install
+   ```bash
+   ./boilder.py check
+   ```
+   
+   build: install the dependencies by tyarn and pip.Please Check the requirements.txt and package.json file
+   add the dependencies 
+   ```build
+   ./boilder.py build
+   ```
+   
+   run: run the application
+   ```run the debug
+    ./boilder.py run 
+   ```
+   
+   run-debug: run the application in debug mode
+   ```
 
+   ```
+   
+### Usage:Code
+   python backend code please check the src.backend.hello file。    
+   front web code please check web index.js.I use the mbox + react. check it   
+   
+   backend like
+   ```python
+     class HelloWorld(ModuleBase):
+         def __init__(self):
+            self.times = 0
+
+         @ToBindMethod
+         def hello(self):
+            self.times = self.times + 1
+            return "Hello From Python Backend times " + str(self.times)
+   ```
+   
+   javascript invoke like
+   ```javascript
+    function fetchHello(){
+      window.HelloWorld.hello((result)=>{console.log("result")})
+    }
+   ```
+ the class translate to Module  and method to translate method
+   
 ### for XP
 
