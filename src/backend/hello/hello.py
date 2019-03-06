@@ -2,9 +2,13 @@ from src.framework.libs.util import ToBindMethod, ModuleBase
 
 
 class HelloWorld(ModuleBase):
+    def __init__(self):
+        self.times = 0
+
     @ToBindMethod
     def hello(self):
-        return "Hello From Python Backend"
+        self.times = self.times + 1
+        return "Hello From Python Backend times " + str(self.times)
 
     @ToBindMethod
     def hello_from_sqlite(self):

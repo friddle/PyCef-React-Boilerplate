@@ -1,6 +1,6 @@
 ###  Boiler.py
           check:  
-                  1.  检查系统库（python。pip。 nodejs,npm)
+                  1.  检查系统库（python。pip。 nodejs,npm,virutalenv)
    
           build:
                   1.  检查系统库（python。pip。 nodejs,npm)

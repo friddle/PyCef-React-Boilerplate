@@ -1,7 +1,6 @@
-virtualenv=16.4.1
-cefpython3=66.0
-PyQt5=5.12
-pycef=1.10
-Pyinstaller=3.4
-peewee=3.8.2
-requests=2.21.0
+#virtualenv==16.4.1
+cefpython3==66.0
+PyQt5==5.12
+pycef==1.10
+Pyinstaller==3.4
+requests==2.21.0

@@ -6,7 +6,8 @@
   "scripts": {
     "build-dll": "cross-env NODE_ENV=development node --trace-warnings -r @babel/register ./node_modules/webpack/bin/webpack --config ./conf/webpack/webpack.config.renderer.dev.dll.js --colors",
     "build-renderer": "cross-env NODE_ENV=production node --trace-warnings -r @babel/register ./node_modules/webpack/bin/webpack --config conf/webpack/webpack.config.renderer.prod.js",
-    "start-renderer-dev": "cross-env NODE_ENV=development node --trace-warnings -r @babel/register ./node_modules/.bin/webpack-dev-server --config ./conf/webpack/webpack.config.renderer.dev.js --colors"
+    "build-renderer-dev": "cross-env NODE_ENV=development node --trace-warnings -r @babel/register ./node_modules/.bin/webpack-dev-server --config ./conf/webpack/webpack.config.renderer.dev.js --colors",
+    "start-render-dev": "yarn build-dll&&yarn build-renderer-dev"
   },
   "repository": {
     "type": "git",

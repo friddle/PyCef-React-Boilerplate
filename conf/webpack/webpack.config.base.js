@@ -44,7 +44,7 @@ export default {
         new webpack.NamedModulesPlugin(),
 
         new CopyWebpackPlugin([
-                { from: 'web/template/app.html', to:'./'}
+                { from: path.join(__dirname,'../../web/template/app.html'), to:'./'}
             ]
         ),
     ]

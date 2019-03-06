@@ -3,10 +3,10 @@
 用cefPython3和React做的一个框架
 
 ### 为什么不用Electron
-简单：不喜欢用Nodejs做后端的框架(nodejs的后端框架确实不好用)
+简单：不喜欢用Nodejs做后端的框架(nodejs的后端框架确实不好用.nodejs有多难用就有多难用)
 
 ### 注意项
-没有完成。打包和工具没写完
+没有完成。打包没写完
 
 ### FrameWork
 ```html
@@ -40,8 +40,8 @@
 ### 用法
 后端业务逻辑部分代码在 src.backend   
 前端代码在web下面  
-工具 boiler.py(没完成)
+工具 boiler.py
 
 ### for XP
-没完成
+暂时没有撸。为了以后的事情撸的
 

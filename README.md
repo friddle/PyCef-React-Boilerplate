@@ -1,14 +1,21 @@
 ## PyCef-React-Boilerplate
 use cefpython and React tools for desktop environment
-
-[中文文档](https://github.com/friddle/PyCef-React-Boilerplate/blob/master/ReadME-CN.md)
+[中文文档](./README-CN.md)  
+<div align="center">
+![PyCef Boilerplate Demo] (internal/show/show.png)
+</div>
+web part forked [electron-react-boilerplate:https://github.com/chentsulin/electron-react-boilerplate]   
+python part inspired by [cefpython:https://github.com/cztomczak/cefpython]
 
 ### Why Not User Electron
 Simple: Who want to use python as backend server logic not nodejs.
 Nodejs as backend language is so fucked to use
 
 ### First Know
-Not finish(Package and Tools Part)
+Not finish(Package and Part)
+Require Tools:
+npm yarn pip python
+
 
 ### FrameWork
 ```html
@@ -40,6 +47,10 @@ Not finish(Package and Tools Part)
 ```
 
 ### Usage
+  1. build
+  2. write code  
+     -- package: write python code to src.backend 
+  
 
 ### for XP
 
