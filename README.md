@@ -60,18 +60,18 @@ npm yarn pip python
    
    build: install the dependencies by tyarn and pip.Please Check the requirements.txt and package.json file
    add the dependencies 
-   ```build
+   ```bash
    ./boilder.py build
    ```
    
    run: run the application
-   ```run the debug
+   ```bash
     ./boilder.py run 
    ```
    
    run-debug: run the application in debug mode
-   ```
-
+   ```bash
+   ./boilder.py run-debug
    ```
    
 ### Usage:Code
@@ -99,4 +99,5 @@ npm yarn pip python
  the class translate to Module  and method to translate method
    
 ### for XP
+   Not finish
 
